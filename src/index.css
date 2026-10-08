@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lora", ui-serif, Georgia, serif;
+  
+  --color-accent: #0f766e; /* teal-700 */
+  --color-accent-light: #14b8a6; /* teal-500 */
+  --color-accent-dark: #115e59; /* teal-800 */
+}
+
+@layer utilities {
+  /* Custom thin scrollbar for intuitive horizontal mobile swiping */
+  .scrollbar-thin {
+    -webkit-overflow-scrolling: touch;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 3px; /* Clean, ultra-thin visual cue */
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #09090b; /* matches bg-zinc-950 */
+    border-radius: 9999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #27272a; /* matches border-zinc-800 */
+    border-radius: 9999px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46; /* hover zinc-700 */
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-zinc-900 font-sans antialiased selection:bg-teal-100 selection:text-teal-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-zinc-950;
+  }
+}

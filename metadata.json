@@ -1,0 +1,6 @@
+{
+  "name": "Luke Frohling - AI Portfolio",
+  "description": "Professional personal website prototype focusing on AI capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
